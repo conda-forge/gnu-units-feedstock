@@ -1,5 +1,5 @@
 {% set name = "gnu-units" %}
-{% set version = "2.22" %}
+{% set version = "2.26" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://ftp.gnu.org/gnu/units/units-{{ version }}.tar.gz
-  sha256: 5d13e1207721fe7726d906ba1d92dc0eddaa9fc26759ed22e3b8d1a793125848
+  sha256: 4c43f7a49fe2212ee433d3c0755a0a1935db35497c4a56bf9f68c5f718873c54
 
 build:
   number: 0
@@ -21,6 +21,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - make
 
 test:
